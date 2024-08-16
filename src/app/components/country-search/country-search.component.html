@@ -1,0 +1,16 @@
+<div class="form-group search-input_container">
+  <input
+    type="text"
+    class="form-control search-country"
+    placeholder="Search country..."
+    [(ngModel)]="searchTerm"
+    (input)="onSearchChange()"
+  />
+</div>
+<ul class="list-group">
+  <li *ngFor="let country of filteredCountries" class="list-group-item">
+    <a href="/country/{{ country.countryCode }}" class="nav-link">
+      {{ country.name }}
+    </a>
+  </li>
+</ul>

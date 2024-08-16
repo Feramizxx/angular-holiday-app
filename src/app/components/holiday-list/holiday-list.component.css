@@ -1,0 +1,32 @@
+.year-selector {
+  margin-bottom: 20px;
+}
+
+.year-selector button {
+  margin-right: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.year-selector button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.holiday-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.holiday-list li {
+  margin-bottom: 15px;
+}
+
+.holiday-list_container {
+  height: 300px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  padding: 14px;
+  border-radius: 10px;
+  margin: 10px 0px;
+}

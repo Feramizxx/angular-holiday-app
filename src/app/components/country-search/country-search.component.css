@@ -1,0 +1,16 @@
+.list-group {
+  height: 250px;
+  overflow-y: auto;
+  padding: 10px 15px;
+}
+.search-input_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.search-country {
+  margin: 15px;
+  padding: 10px;
+}

@@ -1,0 +1,19 @@
+.detailpage-container {
+  margin-top: 20px;
+}
+.country-detail_container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 10px 0px;
+  background-color: #0089ff;
+  color: #fff;
+  padding: 30px;
+  border-radius: 18px;
+}
+
+.table-title {
+  margin-top: 10px;
+  font-weight: 500;
+  font-size: 1.2em;
+}

@@ -1,0 +1,28 @@
+<div
+  class="detailpage-container d-flex flex-column justify-content-center align-items-center"
+>
+  <div
+    class="country-detail_container"
+    *ngIf="countryDetails; else errorTemplate"
+  >
+    <h2>{{ countryDetails.commonName }}</h2>
+    <p><strong>Official Name:</strong> {{ countryDetails.officialName }}</p>
+    <p><strong>Region:</strong> {{ countryDetails.region }}</p>
+
+    <h3>Neighboring Countries:</h3>
+    <ul>
+      <li *ngFor="let border of countryDetails?.borders">
+        <strong>{{ border.commonName }}</strong> ({{ border?.officialName }})
+      </li>
+    </ul>
+  </div>
+
+  <ng-template #errorTemplate>
+    <p>{{ error }}</p>
+  </ng-template>
+  <span class="table-title">{{ countryDetails?.officialName }}</span>
+
+  <app-holiday-list
+    [countryCode]="countryDetails?.countryCode || ''"
+  ></app-holiday-list>
+</div>

@@ -1,0 +1,22 @@
+<div class="holiday-list_container" *ngIf="holidays.length > 0">
+  <ul class="holiday-list">
+    <li *ngFor="let holiday of holidays">
+      <strong>{{ holiday.localName }} ({{ holiday.name }})</strong><br />
+      Date: {{ holiday.date }}<br />
+      Type: {{ holiday.types.join(", ") }}
+    </li>
+  </ul>
+</div>
+<div *ngIf="holidays.length === 0">
+  <p>No holidays found for the selected year.</p>
+</div>
+
+<div class="year-selector">
+  <button
+    *ngFor="let year of getYearsRange()"
+    (click)="onYearSelected(year)"
+    [class.active]="year === currentYear"
+  >
+    {{ year }}
+  </button>
+</div>

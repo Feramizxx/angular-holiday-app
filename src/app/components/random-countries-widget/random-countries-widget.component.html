@@ -1,0 +1,16 @@
+<div *ngFor="let country of randomCountries" class="country-card">
+  <a href="/country/{{ country.holiday?.countryCode }}" class="nav-link">
+    <h2>{{ country.name }}</h2>
+    <div *ngIf="country.holiday">
+      <p>
+        <strong>Next Holiday:</strong> {{ country.holiday.localName }} ({{
+          country.holiday.name
+        }})
+      </p>
+      <p><strong>Date:</strong> {{ country.holiday.date }}</p>
+    </div>
+    <div *ngIf="!country.holiday">
+      <p>No upcoming holidays found.</p>
+    </div>
+  </a>
+</div>
